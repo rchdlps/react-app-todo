@@ -13,7 +13,6 @@ import {
 
 const styles = () => ({
   newappbar: {
-    background: "none",
     background: "#091827"
   },
   flex: {

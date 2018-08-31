@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { Creators as TodoActions } from "~/store/ducks/todos";
+import * as TodoActions from "~/store/actions/todos";
 
 class TodoList extends Component {
   handleSubmit = e => {
@@ -21,6 +21,7 @@ class TodoList extends Component {
           <input type="Text" ref={el => (this.input = el)} />
           <button type="submit">Novo ToDo</button>
         </form>
+
         <ul>
           {todos.map(todo => (
             <li key={todo.id}>
